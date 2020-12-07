@@ -178,7 +178,7 @@ public class Task3 {
             return;
         }
 
-        boolean leapYear = (year % 4 == 0 || year % 400 == 0) && (year % 100 != 0);
+        boolean leapYear = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
 
         int lastDayOfMonth = 0;
 
@@ -285,9 +285,19 @@ public class Task3 {
                         "\n 1 Да" +
                         "\n 2 Нет");
                 if (sc.nextInt() == 1) {
-
+                    System.out.println("Ваш алгоритм:" +
+                            "\n 1 - Схлдить за хлебом" +
+                            "\n 2 - Нарезать хлеб" +
+                            "\n 3 - Положить хлеб в тостер" +
+                            "\n 4 - Включить тостер" +
+                            "\n 5 - Подождать 5 минут" +
+                            "\n 6 - Тосты готовы =)");
+                } else {
+                    System.out.println("Тостов не будет(((");
                 }
             }
+        } else {
+            System.out.println("Есть ли у Вас ");
         }
 
     }
