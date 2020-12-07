@@ -175,24 +175,25 @@ public class Task3 {
 
         if (year < 1 || month < 1 || month > 12 || day < 1) {
             System.out.println("Введенная Вами дата некорректна!");
+            return;
         }
 
-        int leapYear = 0;
+        boolean leapYear = (year % 4 == 0 || year % 400 == 0) && (year % 100 != 0);
 
-        if (leapYear = year % 4 || year % 400) {
+        int lastDayOfMonth = 0;
 
+        if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
+            lastDayOfMonth = 31;
+        } else if (month == 4 || month == 6 || month == 9 || month == 11) {
+            lastDayOfMonth = 30;
+        } else if (month == 2) {
+            if (leapYear) {
+                lastDayOfMonth = 29;
+            } else {
+                lastDayOfMonth = 28;
+            }
         }
-
-        int daysOfMounth = 0;
-
-        if (month = 1 || month = 3 || month = 5 || month = 7 || month = 8 || month = 10 || month = 12) {
-            daysOfMounth <= 31;
-        } else if (month = 4 || month = 6 || month = 9 || month = 11) {
-            daysOfMounth <= 30;
-        } else if (month = 2) {
-
-        }
-
+        System.out.println("");
 
     }
     // Задача 4. Линейное уравнение
@@ -256,13 +257,36 @@ public class Task3 {
 
     }
     // Задача 2. Алгоритм приготовления тостов
-    static void exercise() {
+    static void exercise002() {
         System.out.println("Добрый день!");
         System.out.println("Наш помощник составит для Вас алгоритм приготовления тостов:");
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("");
+        System.out.println("Есть ли у Вас тостер?" +
+                "\n 1 Да" +
+                "\n 2 Нет");
+        if (sc.nextInt() == 1) {
+            System.out.println("Есть ли у Вас хлеб?" +
+                    "\n 1 Да" +
+                    "\n 2 Нет");
+            if (sc.nextInt() == 1) {
+                System.out.println("Ваш алгоритм:" +
+                        "\n 1 - Нарезать хлеб" +
+                        "\n 2 - Положить хлеб в тостер" +
+                        "\n 3 - Включить тостер" +
+                        "\n 4 - Подождать 5 минут" +
+                        "\n 5 - Тосты готовы =)");
+            } else {
+                System.out.println("Есть ли у Вас деньги на хлеб?" +
+                        "\n 1 Да" +
+                        "\n 2 Нет");
+                else if {
+
+                }
+            }
+        }
+
     }
     // Задача 3. Жалюзи
     static void exercise003() {
@@ -274,6 +298,6 @@ public class Task3 {
     }
 
     public static void main(String[] args) {
-        exercise03();
+        exercise002();
     }
 }
