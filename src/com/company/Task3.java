@@ -176,10 +176,14 @@ public class Task3 {
         System.out.println("Введите значиние переменной b");
         double b = sc.nextDouble();
 
-//        if ( a == 0 && b == 0);
-//        System.out.println("х = 0");
-//        else (result = (0 - b) / a);
-//        System.out.println("х = " + result);
+        double result = 0;
+
+        if ( a == 0 && b == 0) {
+            System.out.println("х = 0");
+        } else {
+            result = - b / a;
+            System.out.println("х = " + result);
+        }
     }
     // Задача 5. Квадратное уранение
     static void exercise05() {
@@ -187,6 +191,29 @@ public class Task3 {
         System.out.println("Наш калькулятор поможет с решением квадратных уравнений ax^2+bx+c=0:");
 
         Scanner sc = new Scanner(System.in);
+
+        System.out.println("Введите значение переменной а");
+        double a = sc.nextDouble();
+
+        System.out.println("Введите значение переменной b");
+        double b = sc.nextDouble();
+
+        System.out.println("Введите значение переменной c");
+        double c = sc.nextDouble();
+
+        double D = b * b - 4 * a * c;
+        if (D < 0) {
+            System.out.println("Уравнение не имеет решения");
+        } else if (D == 0) {
+            double x = - b / (2 * a);
+            System.out.println("Уравнение имеет один корень: х = " + x);
+        } else {
+            double x1 = (- b + Math.sqrt(D)) / (2 * a);
+            double x2 = (-b - Math.sqrt(D)) / (2 * a);
+            System.out.println("Уравнение имеет два различных корня:" +
+                    "\n x1 = " + x1 +
+                    "\n x2 = "+ x2);
+        }
 
     }
 
@@ -210,6 +237,6 @@ public class Task3 {
     }
 
     public static void main(String[] args) {
-        exercise02();
+        exercise05();
     }
 }
