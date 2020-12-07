@@ -213,12 +213,10 @@ public class Task3 {
         System.out.println("Введите значиние переменной b");
         double b = sc.nextDouble();
 
-        double result = 0;
-
         if ( a == 0 && b == 0) {
             System.out.println("х = 0");
         } else {
-            result = - b / a;
+            double result = - b / a;
             System.out.println("х = " + result);
         }
     }
@@ -255,10 +253,6 @@ public class Task3 {
 
     // Дополнительные задачи:
 
-    // Задача 1. Самолет и топливо
-    static void exercise001() {
-
-    }
     // Задача 2. Алгоритм приготовления тостов
     static void exercise002() {
         System.out.println("Добрый день!");
@@ -266,51 +260,56 @@ public class Task3 {
 
         Scanner sc = new Scanner(System.in);
 
+        boolean toaster = false;
+        boolean bread = false;
+
         System.out.println("Есть ли у Вас тостер?" +
                 "\n 1 Да" +
                 "\n 2 Нет");
         if (sc.nextInt() == 1) {
-            System.out.println("Есть ли у Вас хлеб?" +
+            toaster = true;
+        } else {
+            System.out.println("Есть ли у Вас деньги на тостер?" +
                     "\n 1 Да" +
                     "\n 2 Нет");
-            if (sc.nextInt() == 1) {
-                System.out.println("Ваш алгоритм:" +
-                        "\n 1 - Нарезать хлеб" +
-                        "\n 2 - Положить хлеб в тостер" +
-                        "\n 3 - Включить тостер" +
-                        "\n 4 - Подождать 5 минут" +
-                        "\n 5 - Тосты готовы =)");
-            } else {
-                System.out.println("Есть ли у Вас деньги на хлеб?" +
-                        "\n 1 Да" +
-                        "\n 2 Нет");
-                if (sc.nextInt() == 1) {
-                    System.out.println("Ваш алгоритм:" +
-                            "\n 1 - Схлдить за хлебом" +
-                            "\n 2 - Нарезать хлеб" +
-                            "\n 3 - Положить хлеб в тостер" +
-                            "\n 4 - Включить тостер" +
-                            "\n 5 - Подождать 5 минут" +
-                            "\n 6 - Тосты готовы =)");
-                } else {
-                    System.out.println("Тостов не будет(((");
-                }
+            if (sc.nextInt() == 2) {
+                System.out.println("Тостов не будет(((");
+                return;
             }
-        } else {
-            System.out.println("Есть ли у Вас ");
         }
-
-    }
-    // Задача 3. Жалюзи
-    static void exercise003() {
-
-    }
-    // Задача 4. Программист Вася
-    static void exercise004() {
-
+        System.out.println("Есть ли у Вас хлеб?" +
+                "\n 1 Да" +
+                "\n 2 Нет");
+        if (sc.nextInt() == 1) {
+            bread = true;
+        } else {
+            System.out.println("Есть ли у Вас деньги на хлеб?" +
+                    "\n 1 Да" +
+                    "\n 2 Нет");
+            if (sc.nextInt() == 2) {
+                System.out.println("Тостов не будет(((");
+                return;
+            }
+        }
+        if (!toaster) {
+            System.out.println(" Сходить в магазин за тостером");
+        }
+        if (!bread) {
+            System.out.println(" Сходить в магазин за хлебом");
+        }
+        System.out.println(" Нарезать хлеб" +
+                "\n Положить хлеб в тостер" +
+                "\n Включить тостер" +
+                "\n Подождать 5 минут" +
+                "\n Тосты готовы =)");
     }
 
     public static void main(String[] args) {
+        exercise01();
+        exercise02();
         exercise03();
+        exercise04();
+        exercise05();
+        exercise002();
     }
 }
