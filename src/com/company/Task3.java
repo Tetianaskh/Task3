@@ -13,6 +13,8 @@ public class Task3 {
         System.out.println("Наш помощник вычислит максимальное из пяти введенных чисел:");
 
         Scanner sc = new Scanner(System.in);
+
+        System.out.println("Введите пожалуйста пять целых чисел:");
         int number1 = sc.nextInt();
         int number2 = sc.nextInt();
         int number3 = sc.nextInt();
@@ -24,7 +26,7 @@ public class Task3 {
         max = Math.max(max, number4);
         max = Math.max(max, number5);
 
-        System.out.println(max);
+        System.out.println("Максимальное число из введенных Вами = " + max);
     }
     // Задача 2. Тест
     static void exercise02() {
@@ -161,6 +163,36 @@ public class Task3 {
     }
     // Задача 3. Проверка даты
     static void exercise03() {
+        System.out.println("Добрый день!");
+        System.out.println("Наш помощник определит корректность введеной Вами даты:");
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Введите пожалуйста в формате день месяц год");
+        int day = sc.nextInt();
+        int month = sc.nextInt();
+        int year = sc.nextInt();
+
+        if (year < 1 || month < 1 || month > 12 || day < 1) {
+            System.out.println("Введенная Вами дата некорректна!");
+        }
+
+        int leapYear = 0;
+
+        if (leapYear = year % 4 || year % 400) {
+
+        }
+
+        int daysOfMounth = 0;
+
+        if (month = 1 || month = 3 || month = 5 || month = 7 || month = 8 || month = 10 || month = 12) {
+            daysOfMounth <= 31;
+        } else if (month = 4 || month = 6 || month = 9 || month = 11) {
+            daysOfMounth <= 30;
+        } else if (month = 2) {
+
+        }
+
 
     }
     // Задача 4. Линейное уравнение
@@ -225,7 +257,12 @@ public class Task3 {
     }
     // Задача 2. Алгоритм приготовления тостов
     static void exercise() {
+        System.out.println("Добрый день!");
+        System.out.println("Наш помощник составит для Вас алгоритм приготовления тостов:");
 
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("");
     }
     // Задача 3. Жалюзи
     static void exercise003() {
@@ -237,6 +274,6 @@ public class Task3 {
     }
 
     public static void main(String[] args) {
-        exercise05();
+        exercise03();
     }
 }
