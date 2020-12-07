@@ -14,7 +14,7 @@ public class Task3 {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Введите пожалуйста пять целых чисел:");
+        System.out.println("Введите пожалуйста, пять целых чисел:");
         int number1 = sc.nextInt();
         int number2 = sc.nextInt();
         int number3 = sc.nextInt();
@@ -193,7 +193,12 @@ public class Task3 {
                 lastDayOfMonth = 28;
             }
         }
-        System.out.println("");
+
+        if (day <= lastDayOfMonth) {
+            System.out.println("Введенная Вами дата корректна!");
+        } else {
+            System.out.println("Введенная Вами дата некорректна!");
+        }
 
     }
     // Задача 4. Линейное уравнение
@@ -281,7 +286,7 @@ public class Task3 {
                 System.out.println("Есть ли у Вас деньги на хлеб?" +
                         "\n 1 Да" +
                         "\n 2 Нет");
-                if () {
+                if (sc.nextInt() == 1) {
 
                 }
             }
@@ -298,6 +303,6 @@ public class Task3 {
     }
 
     public static void main(String[] args) {
-        exercise002();
+        exercise03();
     }
 }
