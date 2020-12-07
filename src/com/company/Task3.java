@@ -19,12 +19,12 @@ public class Task3 {
         int number4 = sc.nextInt();
         int number5 = sc.nextInt();
 
-        int result = Math.max(number1, number2);
-        int result2 = Math.max(result, number3);
-        int result3 = Math.max(result2, number4);
-        int result4 = Math.max(result3, number5);
+        int max = Math.max(number1, number2);
+        max = Math.max(max, number3);
+        max = Math.max(max, number4);
+        max = Math.max(max, number5);
 
-        System.out.println(result4);
+        System.out.println(max);
     }
     // Задача 2. Тест
     static void exercise02() {
@@ -33,76 +33,131 @@ public class Task3 {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("1. Какая планета солнечной системы самая большая?" +
-        "1 Венера" +
-        "2 Сатурн" +
-        "3 Юпитер*" +
-        "4 Меркурий");
-        String answer1 = sc.toString();
+        int score = 0;
+        int numberOfQuestions = 10;
+        int maxScore = 12;
 
-        System.out.println("2. Самосветящееся небесное тело?" +
-        "1 звезда*" +
-        "2 планета" +
-        "3 метеорит" +
-        "4 Луна");
-        String answer2 = sc.toString();
+        System.out.println("1. Какая планета солнечной системы самая большая? " +
+        "\n 1 Венера " +
+        "\n 2 Сатурн " +
+        "\n 3 Юпитер* " +
+        "\n 4 Меркурий");
+        if (sc.nextInt() == 3) {
+            score += 1;
+            System.out.println("Верный ответ");
+        } else {
+            System.out.println("Неверный ответ");
+        }
+
+        System.out.println("2. Самосветящееся небесное тело? " +
+        "\n 1 звезда* " +
+        "\n 2 планета " +
+        "n 3 метеорит " +
+        "\n 4 Луна");
+        if (sc.nextInt() == 1) {
+            score += 1;
+            System.out.println("Верный ответ");
+        } else {
+            System.out.println("Неверный ответ");
+        }
 
         System.out.println("3. Группа звезд, занимающая определенный участок неба?" +
-        "1 орбита" +
-        "2 комета" +
-        "3 астероиды" +
-        "4 созвездие*");
-        String answer3 = sc.toString();
+        "\n 1 орбита" +
+        "\n 2 комета" +
+        "\n 3 астероиды" +
+        "\n 4 созвездие*");
+        if (sc.nextInt() == 4) {
+            score += 1;
+            System.out.println("Верный ответ");
+        } else {
+            System.out.println("Неверный ответ");
+        }
 
         System.out.println("4. Путь движения планет вокруг Солнца называют?" +
-        "1 астероидами" +
-        "2 спутниками" +
-        "3 орбитами*" +
-        "4 кометами");
-        String answer4 = sc.toString();
+        "\n 1 астероидами" +
+        "\n 2 спутниками" +
+        "\n 3 орбитами*" +
+        "\n 4 кометами");
+        if (sc.nextInt() == 3) {
+            score += 1;
+            System.out.println("Верный ответ");
+        } else {
+            System.out.println("Неверный ответ");
+        }
 
         System.out.println("5. Планеты Солнечной системы изучают?" +
-        "1 географы" +
-        "2 астрономы*" +
-        "3 историки" +
-        "4 химики");
-        String answer5 = sc.toString();
+        "\n 1 географы" +
+        "\n 2 астрономы*" +
+        "\n 3 историки" +
+        "\n 4 химики");
+        if (sc.nextInt() == 2) {
+            score += 1;
+            System.out.println("Верный ответ");
+        } else {
+            System.out.println("Неверный ответ");
+        }
 
         System.out.println("6. Самая яркая планета Солнечной системы, названная в честь богини красоты?" +
-        "1 Земля" +
-        "2 Марс" +
-        "3 Венера*" +
-        "4 Луна");
-        String answer6 = sc.toString();
+        "\n 1 Земля" +
+        "\n 2 Марс" +
+        "\n 3 Венера*" +
+        "\n 4 Луна");
+        if (sc.nextInt() == 3) {
+            score += 1;
+            System.out.println("Верный ответ");
+        } else {
+            System.out.println("Неверный ответ");
+        }
 
         System.out.println("7. Небесное тело, обращающееся вокруг Солнца?" +
-        "1 планета*" +
-        "2 спутник" +
-        "3 звезда" +
-        "4 метеорит");
-        String answer7 = sc.toString();
+        "\n 1 планета*" +
+        "\n 2 спутник" +
+        "\n 3 звезда" +
+        "\n 4 метеорит");
+        if (sc.nextInt() == 1) {
+            score += 1;
+            System.out.println("Верный ответ");
+        } else {
+            System.out.println("Неверный ответ");
+        }
 
         System.out.println("8. Космический объект, обращающийся вокруг планеты?" +
-        "1 звезда" +
-        "2 комета" +
-        "3 спутник*" +
-        "4 астероид");
-        String answer8 = sc.toString();
+        "\n 1 звезда" +
+        "\n 2 комета" +
+        "\n 3 спутник*" +
+        "\n 4 астероид");
+        if (sc.nextInt() == 3) {
+            score += 1;
+            System.out.println("Верный ответ");
+        } else {
+            System.out.println("Неверный ответ");
+        }
 
         System.out.println("9. На какой планете побывали автоматические межпланетные станции?" +
-        "1 на Венере*" +
-        "2 на Юпитере" +
-        "3 на Сатурне" +
-        "4 на Марсе");
-        String answer9 = sc.toString();
+        "\n 1 на Венере*" +
+        "\n 2 на Юпитере" +
+        "\n 3 на Сатурне" +
+        "\n 4 на Марсе");
+        if (sc.nextInt() == 1) {
+            score += 1;
+            System.out.println("Верный ответ");
+        } else {
+            System.out.println("Неверный ответ");
+        }
 
         System.out.println("10. Из-за чего происходит смена времен года?" +
-        "1 из-за вращения Земли вокруг своей оси" +
-        "2 из-за вращения Земли вокруг Солнца*" +
-        "3 из-за вращения Земли вокруг Луны" +
-        "4 из-за вращения Луны вокруг Земли");
-        String answer10 = sc.toString();
-
+        "\n 1 из-за вращения Земли вокруг своей оси" +
+        "\n 2 из-за вращения Земли вокруг Солнца*" +
+        "\n 3 из-за вращения Земли вокруг Луны" +
+        "\n 4 из-за вращения Луны вокруг Земли");
+        if (sc.nextInt() == 2) {
+            score += 1;
+            System.out.println("Верный ответ");
+        } else {
+            System.out.println("Неверный ответ");
+        }
+        int result = score * maxScore / numberOfQuestions;
+        System.out.println("Ваша оценка = " + result);
     }
     // Задача 3. Проверка даты
     static void exercise03() {
@@ -116,18 +171,22 @@ public class Task3 {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Введите значение переменной а");
-        int a = sc.nextDouble();
+        double a = sc.nextDouble();
 
         System.out.println("Введите значиние переменной b");
-        int b = sc.nextDouble();
+        double b = sc.nextDouble();
 
-        if ( a = 0 && b = 0);
-        System.out.println("х = 0");
-        else (result = (0 - b) / a);
-        System.out.println("х = " + result);
+//        if ( a == 0 && b == 0);
+//        System.out.println("х = 0");
+//        else (result = (0 - b) / a);
+//        System.out.println("х = " + result);
     }
     // Задача 5. Квадратное уранение
     static void exercise05() {
+        System.out.println("Добрый день!");
+        System.out.println("Наш калькулятор поможет с решением квадратных уравнений ax^2+bx+c=0:");
+
+        Scanner sc = new Scanner(System.in);
 
     }
 
