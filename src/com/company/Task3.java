@@ -14,7 +14,7 @@ public class Task3 {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Введите пожалуйста, пять целых чисел:");
+        System.out.println("Введите, пожалуйста, пять целых чисел:");
         int number1 = sc.nextInt();
         int number2 = sc.nextInt();
         int number3 = sc.nextInt();
@@ -168,7 +168,7 @@ public class Task3 {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Введите дату пожалуйста, в формате день месяц год");
+        System.out.println("Введите дату, пожалуйста, в формате день месяц год:");
         int day = sc.nextInt();
         int month = sc.nextInt();
         int year = sc.nextInt();
@@ -249,9 +249,8 @@ public class Task3 {
             double x2 = (-b - Math.sqrt(D)) / (2 * a);
             System.out.println("Уравнение имеет два различных корня:" +
                     "\n x1 = " + x1 +
-                    "\n x2 = "+ x2);
+                    "\n x2 = " + x2);
         }
-
     }
 
     // Дополнительные задачи:
