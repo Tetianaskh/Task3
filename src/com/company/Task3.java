@@ -199,7 +199,6 @@ public class Task3 {
         } else {
             System.out.println("Введенная Вами дата некорректна!");
         }
-
     }
     // Задача 4. Линейное уравнение
     static void exercise04() {
