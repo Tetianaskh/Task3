@@ -168,7 +168,7 @@ public class Task3 {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Введите пожалуйста в формате день месяц год");
+        System.out.println("Введите дату пожалуйста, в формате день месяц год");
         int day = sc.nextInt();
         int month = sc.nextInt();
         int year = sc.nextInt();
@@ -281,7 +281,7 @@ public class Task3 {
                 System.out.println("Есть ли у Вас деньги на хлеб?" +
                         "\n 1 Да" +
                         "\n 2 Нет");
-                else if {
+                if () {
 
                 }
             }
